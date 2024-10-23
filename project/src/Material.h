@@ -140,7 +140,7 @@ namespace dae
 			// Determine kd -> 1 - Fresnel, cancel out if it’s a metal (kd = 0)
 			ColorRGB kd{0,0,0};
 			if (m_Metalness == 0)  
-				kd = {1,1,1} - F;
+				kd =  ColorRGB{1,1,1} - F ;
 
 			// Calculate Diffuse => BRDF::Lambert using the kd
 			ColorRGB diffuse = {};
